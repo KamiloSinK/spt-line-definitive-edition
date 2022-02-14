@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Esto es el formulario de contacto</h1>
+        <h1>Hay productos</h1>
     </div>
 </template>
 
 <script>
 
 export default {
-  name: 'Contacto'
+  name: 'Products'
 }
 </script>
