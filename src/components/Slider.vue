@@ -3,24 +3,22 @@
         <b-carousel
             id="carousel-1"
             class="formato"
-            v-model="slide"
+            img-height="500px"
+            fade
             :interval="4000"
             controls
             indicators
-            @sliding-start="onSlideStart"
-            @sliding-end="onSlideEnd"
             >
-            <!-- Text slides with image -->
-            <b-carousel-slide img-src=""
-            ></b-carousel-slide>
+            <!-- src="../assets/logo.png"-->
+            <b-carousel-slide :img-src="require('../assets/slide_one.png')">
+            </b-carousel-slide>
 
             <!-- Slides with custom text -->
-            <b-carousel-slide img-src="">
-                <h1>Hello world!</h1>
+            <b-carousel-slide :img-src="require('../assets/slide_two.png')">
             </b-carousel-slide>
 
             <!-- Slides with image only -->
-            <b-carousel-slide img-src="">
+            <b-carousel-slide :img-src="require('../assets/slide_three.png')">
 
             </b-carousel-slide>
             
@@ -30,9 +28,8 @@
 
 <style>
     .formato{
-        background: linear-gradient(180deg, #28A745 0%, #2C2C2C 100%);;
-        /*width: 1024px;*/
-        height: 500px;
+        background: linear-gradient(180deg, #28A745 0%, #2C2C2C 100%);
+        width: 100%;
         text-shadow: 1px 1px 2px #333;
     }
 </style>
