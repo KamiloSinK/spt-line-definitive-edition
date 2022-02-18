@@ -1,9 +1,9 @@
 <template>
-    <div class="container mt-5 mb-5 pb-5 pt-5">
+    <div class="container py-5 my-md-5 py-md-5">
         <b-row>
-            <b-col>
-                <div class="pr-5">
-                    <h4 class="pb-2">
+            <b-col xs="12" md="6" class="px-4">
+                <div >
+                    <h4 class="pb-2 pb-md-4">
                         Quienes somos?
                     </h4>
                     <p>
@@ -13,11 +13,17 @@
                 </div>
             </b-col>
 
-            <b-col>
-                <div class="px-4">
-                    <img src="../assets/panita.png" alt="" width="481px">
+            <b-col xs="12" md="6" >
+                <div class="px-4 d-flex flex-column justify-content-center align-content-center" style="height:100%">
+                    <img src="../assets/panita.png" alt="" width="100%">
                 </div>
             </b-col>
         </b-row>
     </div>
 </template>
+
+<style>
+    p{
+        font-size: 16px;
+    }
+</style>

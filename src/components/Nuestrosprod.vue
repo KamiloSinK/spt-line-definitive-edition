@@ -1,25 +1,25 @@
 <template>
     <div>
-        <b-container class="py-5">
-            <b-row>
-                <b-col md="11">
+        <b-container class="pt-5">
+            <b-row class="pb-md-3">
+                <div class="container d-flex justify-content-between mb-2">
                     <h4>Nuestros productos</h4>
-                </b-col>
-                <b-col md="1">
-                    <p><a href="/products">Ver mas</a></p>
-                </b-col>
+
+                    <span><a href="/products" style="text-decoration:none">Ver mas</a></span>
+                </div>
+                
             </b-row>
-            <b-row class="pt-3">
-                <b-col>
+            <b-row>
+                <b-col xs="12" md="3">
                     <Tarjetas />
                 </b-col>
-                <b-col>
+                <b-col xs="12" md="3">
                      <Tarjetas />
                 </b-col>
-                <b-col>
+                <b-col xs="12" md="3">
                      <Tarjetas />
                 </b-col>
-                <b-col>
+                <b-col xs="12" md="3">
                      <Tarjetas />
                 </b-col>
             </b-row>
@@ -28,7 +28,9 @@
 </template>
 
 <style>
-
+    span a{
+        color: #28A745 !important;
+    }
 </style>
 
 <script>

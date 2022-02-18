@@ -12,7 +12,9 @@
 
 <style>
   .stilo {
+    background: #6c757d58 !important;
     border: 1px solid #6c757d58;
+    width: 80% !important;
   }
 </style>
 

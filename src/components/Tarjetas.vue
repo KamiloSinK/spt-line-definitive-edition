@@ -1,36 +1,31 @@
 <template>
-    <div>
-        <div class="sombra mb-5">
-            <b-card
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="mb-5"
-            >  
-                <b-card-img :src="require('../assets/art1.jpg')"></b-card-img>
-                <hr>
-                <b-card-text>
-                    <h5>Titulo</h5>
-                        Categoria:
-                </b-card-text>
-                <b-row>
-                    <b-col md="2">
+    <div class="cardCat">
+        <b-card class="mb-5 sombra d-flex">
+            <img :src="require('../assets/art1.jpg')" alt="">
+            <hr>
+            <div class="hCard">
+                Titulo
+            </div>
+            <b-card-text>
+            Categoria: Alarma
+            </b-card-text>
 
-                    </b-col>
-                    <b-col md="10">
-                        <b-button to="/" variant="success" size="sm" class="px-5 ml-3 fuenteB">Ver mas</b-button>
-                    </b-col>
-                </b-row>
-            </b-card>
-        </div>
+            <div class="d-flex flex-row justify-content-end">
+                <b-button href="#" variant="success" class="text-white px-5">Ver mas</b-button>
+            </div>
+        </b-card>
     </div>
 </template>
+
 
 <style>
     hr {
         background: #28A745;
-        height: 3px;
+        height: 0.1rem !important;
+        
+    }
+    .cardCat img {
+        width: 100% !important;
     }
 </style>
 
