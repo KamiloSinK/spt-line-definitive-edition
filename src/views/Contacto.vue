@@ -6,7 +6,7 @@
           <b-row>
             <b-col md="2">
             </b-col>
-            <b-col sm="8">
+            <b-col md="8">
               <div class="py-3 mt-4 d-block flex-row justify-content-center">
                 <h5>¿Estas interesado en nuestros productos?</h5>
 
