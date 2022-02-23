@@ -10,17 +10,20 @@
 
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
-                        <b-nav-form class="falseinput">
-                            <b-input-group size="sm">
-                                <b-form-input placeholder="Buscar..." style="border: 0"></b-form-input>
-
-                                <template #append>
-                                    <b-button variant="white" type="submit">
-                                        <b-icon icon="search"></b-icon>
-                                    </b-button>
-                                </template>
-                            </b-input-group>
-                        </b-nav-form>
+                        <div class="falseinput pr-2">
+                            <b-nav-form>
+                                <b-input-group size="sm">
+                                    <input type="text" placeholder="Buscar..." class="px-3">
+                                    
+                                    <template #append>
+                                        <b-button variant="white" type="submit">
+                                            <b-icon icon="search"></b-icon>
+                                        </b-button>
+                                    </template>
+                                    </input>
+                                </b-input-group>
+                            </b-nav-form>
+                        </div>
                     </b-navbar-nav>
 
                     <!-- Right aligned nav items -->
@@ -39,7 +42,11 @@
     .falseinput {
         border: 1px solid #6C757D;
         border-radius: 20px;
+    }
+    input, .equis{
         outline: none;
+        background-color: transparent;
+        border: 0;
     }
     span {
         color:  #28A745;

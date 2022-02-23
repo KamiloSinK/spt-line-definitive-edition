@@ -4,15 +4,15 @@
             <h4 class="mb-4">Nuestras categorias</h4>
 
             <b-row>
-                <b-col xs="12" sm="6" md="3" class="hCat">
+                <b-col xs="12" sm="6" md="3" class="pb-4 pb-sm-4 pb-md-0">
                     <a href="" style="text-decoration:none">
                         <div class="">
                             <b-card no-body class="text-center sombra hCat">
-                                <div class="bg-light text-success">
+                                <div class="text-success">
                                     <div class="d-flex flex-row justify-content-center py-5 catSize">
                                         <b-img :src="require('../assets/Vector.png')"></b-img>
                                     </div>
-                                    <div class="pb-3">
+                                    <div class="pb-3 container">
                                         <h4>Accesorios para camara</h4>
                                     </div>
                                 </div>
@@ -20,15 +20,15 @@
                         </div>
                     </a>
                 </b-col>
-                <b-col xs="12" sm="6" md="3" class="hCat">
+                <b-col xs="12" sm="6" md="3" class="pb-4 pb-sm-4 pb-md-0">
                     <a href="" style="text-decoration:none">
                         <div class="">
                             <b-card no-body class="text-center sombra hCat">
-                                <div class="bg-light text-success">
+                                <div class="text-success">
                                     <div class="d-flex flex-row justify-content-center py-5 catSize">
                                         <b-img :src="require('../assets/Vector-1.png')"></b-img>
                                     </div>
-                                    <div class="pb-3">
+                                    <div class="pb-3 container">
                                         <h4>Baterias</h4>
                                     </div>
                                 </div>
@@ -36,15 +36,15 @@
                         </div>
                     </a>
                 </b-col>
-                <b-col xs="12" sm="6" md="3" class="hCat">
+                <b-col xs="12" sm="6" md="3" class="pb-4 pb-sm-4 pb-md-0">
                     <a href="" style="text-decoration:none">
                         <div class="">
                             <b-card no-body class="text-center sombra hCat">
-                                <div class="bg-light text-success">
+                                <div class="text-success">
                                     <div class="d-flex flex-row justify-content-center py-5 catSize">
                                         <b-img :src="require('../assets/Vector-2.png')"></b-img>
                                     </div>
-                                    <div class="pb-3">
+                                    <div class="pb-3 container">
                                         <h4>Accesorios para el control del acceso</h4>
                                     </div>
                                 </div>
@@ -52,15 +52,15 @@
                         </div>
                     </a>
                 </b-col>
-                <b-col xs="12" sm="6" md="3" class="hCat">
+                <b-col xs="12" sm="6" md="3"  class="pb-4 pb-sm-4 pb-md-0">
                     <a href="" style="text-decoration:none">
                         <div class="">
                             <b-card no-body class="text-center sombra hCat">
-                                <div class="bg-light text-success">
+                                <div class=" text-success">
                                     <div class="d-flex flex-row justify-content-center py-5 catSize">
                                         <b-img :src="require('../assets/Vector-3.png')"></b-img>
                                     </div>
-                                    <div class="pb-3">
+                                    <div class="pb-3 container">
                                         <h4>Alarmas</h4>
                                     </div>
                                 </div>
@@ -77,10 +77,13 @@
     h4 {
         size: 24px;
     }
+    
     .hCat{
-        height: 280px;
+        height: 18rem;
+       
     }
     .catSize{
-        height: 190px;
+        height: 12rem;
+        
     }
 </style>

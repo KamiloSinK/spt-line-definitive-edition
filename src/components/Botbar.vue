@@ -49,7 +49,6 @@
     outline: none;
     text-decoration: none
     }
-
     a:link {
     color: #ffffff;
     }

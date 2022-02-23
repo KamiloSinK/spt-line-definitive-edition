@@ -23,9 +23,9 @@
                         <div class="">
                             <img src="../assets/misvisicon.png" alt="iconito" width="100%">
                         <b-row>
-                            <b-col md="4"></b-col>
-                            <b-col md="8">
-                                <h2 class="text-white h1" align="right">Calidad al mejor precio</h2>
+                            <b-col md="3"></b-col>
+                            <b-col md="9">
+                                <h2 class="text-white text-md-right h1 d-md-flex justify-content-end">Calidad al mejor precio</h2>
                             </b-col>
                         </b-row>
                         </div>
@@ -39,9 +39,5 @@
 <style>
     .relleno {
         background: linear-gradient(180deg, #28A745 0%, #2C2C2C 100%);
-    };
-
-    img {
-        width: ;
     }
 </style>
