@@ -1,17 +1,20 @@
 <template>
     <div class="cardCat">
         <b-card class="mb-5 sombra">
-            <img :src="require('../assets/art1.jpg')" alt="">
+<!--            <img :src="require('../assets/art1.jpg')" alt=""> -->
+                <img :src="imagen" :alt="nombre">
             <hr>
             <div class="hCard">
-                Titulo
+                {{ nombre }}
             </div>
             <b-card-text>
-            Categoria: Alarma
+                <div class="expand" style="height: 3rem">
+                    Categoria: {{ categoria }}
+                </div>
             </b-card-text>
 
             <div class="d-flex flex-row justify-content-end">
-                <b-button href="#" size="sm" variant="success" class="text-white px-lg-5">Ver mas</b-button>
+                <b-button href="#" size="sm" variant="success" to="{ name: 'Productpage', params: { name: name }}" class="text-white px-lg-5">Ver mas</b-button>
                 
             </div>
         </b-card>
@@ -28,10 +31,19 @@
     .cardCat img {
         width: 100% !important;
     }
+    .expand {
+        height: 5rem;
+    }
 </style>
 
 <script>
 export default {
-    name: 'Tarjetas'
+    name: 'Tarjetas',
+    props: {
+        id: String,
+        nombre: String,
+        categoria: String,
+        imagen: String
+    }
 }
 </script>

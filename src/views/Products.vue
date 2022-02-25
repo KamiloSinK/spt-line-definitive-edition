@@ -31,20 +31,18 @@
           <b-col md="9">
             <br class="h4">
             <h6 class="pt-4">{{rows}} productos en total</h6>
-            <div class="overflow-auto">
+            <div class="">
               <b-row>
-                <b-col xs="12" sm="6" md="4" v-for="(item, index) of items" :key="item.id">
-                  <Tarjetas />
+                <b-col xs="12" sm="6" md="4" v-for="producto of productos" :key="producto.id">
+                  <div>
+                    <Tarjetas :nombre="producto.titulo" :categoria="producto.categoria" :imagen="producto.image" />
+                  </div>
                 </b-col>
               </b-row>
               
-              <b-pagination
-                v-model="currentPage"
-                :total-rows="rows"
-                :per-page="perPage"
-                aria-controls="my-table"
-                class="d-flex justify-content-end"
-              ></b-pagination>
+              <div class="d-flex justify-content-end overflow-auto">
+                <b-button v-for="n in buttons" :key="n.id" variant="light" class="paginacion mb-4 mx-1">{{ n }}</b-button>
+              </div>
             </div>
             
           </b-col>
@@ -69,6 +67,18 @@
     text-overflow: ellipsis;
     overflow: hidden;
   }
+  .paginacion {
+    width: 3rem;
+    color: green;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  .paginacion:focus{
+    background: green;
+  }
+  .paginacion:hover{
+    background: green;
+    color: white;
+  }
 </style>
 
 <script>
@@ -81,35 +91,39 @@
     data() {
       return {
         perPage: 9,
-        currentPage: 1,
-        items: [
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'},
-          {nombre: 'Camilo'}
+        productos: [
+          {titulo: 'Camilo', categoria: 'Alarmas', image: 'https://picsum.photos/id/1/0/0'},
+          {titulo: 'Jose', categoria: 'Baterias', image: 'https://picsum.photos/id/2/0/0'},
+          {titulo: 'Gomez', categoria: 'Alarmas', image: 'https://picsum.photos/id/3/0/0'},
+          {titulo: 'Gerardino', categoria: 'Accesorios para el control del acceso', image: 'https://picsum.photos/id/4/0/0'},
+          {titulo: 'Arlet', categoria: 'Baterias', image: 'https://picsum.photos/id/5/0/0'},
+          {titulo: 'Carolina', categoria: 'Accesorios para el control del acceso', image: 'https://picsum.photos/id/6/0/0'},
+          {titulo: 'Valerio', categoria: 'Accesorios para el control del acceso', image: 'https://picsum.photos/id/7/0/0'},
+          {titulo: 'Centeno', categoria: 'Alarmas', image: 'https://picsum.photos/id/8/0/0'},
+          {titulo: 'Luisa', categoria: 'Baterias', image: 'https://picsum.photos/id/9/0/0'},
+          {titulo: 'Mariana', categoria: 'Alarmas', image: 'https://picsum.photos/id/10/0/0'},
+          {titulo: 'Edward', categoria: 'Alarmas', image: 'https://picsum.photos/id/11/0/0'},
+          {titulo: 'Juan', categoria: 'Baterias', image: 'https://picsum.photos/id/12/0/0'},
+          {titulo: 'Maria', categoria: 'Alarmas', image: 'https://picsum.photos/id/13/0/0'},
+          {titulo: 'Alfonso', categoria: 'Alarmas', image: 'https://picsum.photos/id/14/0/0'},
+          {titulo: 'Enrique', categoria: 'Accesorios para el control del acceso', image: 'https://picsum.photos/id/15/0/0'},
+          {titulo: 'Luis', categoria: 'Baterias', image: 'https://picsum.photos/id/16/0/0'},
+          {titulo: 'Arturo', categoria: 'Baterias', image: 'https://picsum.photos/id/17/0/0'},
+          {titulo: 'Jesus', categoria: 'Alarmas', image: 'https://picsum.photos/id/18/0/0'},
+          {titulo: 'Alejandro', categoria: 'Alarmas', image: 'https://picsum.photos/id/19/0/0'},
+          {titulo: 'Michael', categoria: 'Accesorios para el control del acceso', image: 'https://picsum.photos/id/20/0/0'},
+          {titulo: 'Demiugos', categoria: 'Baterias', image: 'https://picsum.photos/id/21/0/0'}
         ]
       }
     },
     computed: {
       rows() {
-        return this.items.length
+        return this.productos.length
+      },
+      buttons() {
+        return this.productos.length / 9 === Math.floor(this.productos.length / 9)
+        ? Math.floor(this.productos.length / 9)
+        : Math.floor(this.productos.length / 9) + 1
       }
     },
     components: {
