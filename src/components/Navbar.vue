@@ -31,6 +31,7 @@
                         <b-nav-item to="/" class="px-3"><span>Home</span></b-nav-item>
                         <b-nav-item to="/products" class="px-3"><span>Productos</span></b-nav-item>
                         <b-nav-item to="/contacto" class="px-3"><span>Contacto</span></b-nav-item>
+                        <!-- <b-nav-item to="/proveedores" class="px-3"><span>Proveedores</span></b-nav-item> -->
                     </b-navbar-nav>
                 </b-collapse>
             </b-navbar>

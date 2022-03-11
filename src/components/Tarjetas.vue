@@ -1,8 +1,8 @@
 <template>
     <div class="cardCat">
         <b-card class="mb-5 sombra">
-<!--            <img :src="require('../assets/art1.jpg')" alt=""> -->
-                <img :src="imagen" :alt="nombre">
+                <img :src="imagen" v-if="imagen != ''" :alt="nombre">
+                <img :src="require('../assets/art1.jpg')" v-if="imagen == '' " :alt="id">
             <hr>
             <div class="hCard">
                 {{ nombre }}
@@ -14,7 +14,16 @@
             </b-card-text>
 
             <div class="d-flex flex-row justify-content-end">
-                <b-button href="#" size="sm" variant="success" to="{ name: 'Productpage', params: { name: name }}" class="text-white px-lg-5">Ver mas</b-button>
+                <b-button 
+                @click="setProduct({
+                    id: id,
+                    name: nombre,
+                    category: categoria,
+                    image: imagen
+                })"
+                :to="{ path: `/products/${this.id}/${this.nombre}`, params: { id, nombre, categoria, imagen }}"
+                href="#" size="sm" variant="success"
+                class="text-white px-lg-5">Ver mas</b-button>
                 
             </div>
         </b-card>
@@ -37,6 +46,8 @@
 </style>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: 'Tarjetas',
     props: {
@@ -44,6 +55,10 @@ export default {
         nombre: String,
         categoria: String,
         imagen: String
+    },
+
+    methods:{
+        ...mapMutations(['setProduct'])
     }
 }
 </script>

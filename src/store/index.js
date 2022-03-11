@@ -5,8 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    product: {}
   },
   mutations: {
+    setProduct(state, payload){
+      state.product= payload;
+
+    }
   },
   actions: {
   },
