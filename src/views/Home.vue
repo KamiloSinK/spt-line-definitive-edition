@@ -3,7 +3,7 @@
     <Slider />
     <About />
     <MisyVis />
-    <Nproductos />
+    <Nproductos :title="title"/>
     <hr class="container stilo">
     <Categorias />
     <Suscripcion />
@@ -36,6 +36,11 @@ export default {
     Nproductos,
     Categorias,
     Suscripcion
+  },
+  data(){
+      return{
+          title: 'Nuestros productos'
+      }
   }
 }
 </script>

@@ -41,7 +41,7 @@
             </b-col>
         </b-row>
         <hr>
-        <Nproductos />
+        <Nproductos :title="title"/>
     </div>
 </template>
 <style scoped>
@@ -82,6 +82,11 @@ export default ({
         return this.$store.state.product
         }
 
+    },
+    data(){
+        return{
+            title: 'Productos sugeridos'
+        }
     }
 })
 </script>

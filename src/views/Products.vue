@@ -2,7 +2,7 @@
     <div class="products">
       <b-container>
         <div class="pt-4">
-          <p>Ruta/Subs-ruta</p>
+          <p>Ruta/Subs-ruta/Productos</p>
         </div>
         <b-row>
           <b-col md="3">
